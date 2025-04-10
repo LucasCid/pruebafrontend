@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba-tecnica-js</title>
+    <link rel="stylesheet" href="./styles/estilos.css">
+</head>
+<body>
+
+    <button onclick="openModal()">Abrir modal</button>
+
+  <div class="modal" id="modal">
+
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>SINCRONIZA TU SII Y AGILIZA TUS OPERACIONES</h2>
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('empresa')">SII Empresa</button>
+        <button class="tab" onclick="switchTab('personal')">SII Personal</button>
+      </div>
+
+      <div id="empresa" class="form-section active">
+        <p>Vincula tu cuenta del SII Empresa para sincronizar automáticamente tus facturas, recibir ofertas en cuanto las emitas y evita requisitos adicionales en tus operaciones.</p>
+        <div class="form-group">
+          <label>Rut Empresa</label>
+          <input type="text" />
+        </div>
+
+        <div class="form-group">
+          <label>Contraseña SII</label>
+          <input type="password" />
+        </div>
+
+      </div>
+
+
+      <div id="personal" class="form-section">
+        <p>Vincula tu cuenta SII Personal para sincronizar automáticamente tus facturas y recibir ofertas en cuanto las emitas.</p>
+        <div class="form-group">
+          <label>Rut Empresa</label>
+          <input type="text" />
+        </div>
+
+        <div class="form-group">
+          <label>Contraseña SII</label>
+          <input type="password" />
+        </div>
+
+        <div class="form-group">
+          <label>Contraseña Personal SII</label>
+          <input type="password" />
+        </div>
+
+      </div>
+
+      <div class="info">
+        <span>🔐</span>
+        <span>Tus credenciales estarán encriptadas y solo podremos leer información, sin realizar ningún cambio. Además en cualquier momento podrás desactivarla desde el menú Sincronizaciones</span>
+      </div>
+
+      <div class="footer">
+        <a href="#">No volver a mostrar</a>
+        <div class="footer-buttons">
+          <button onclick="closeModal()">Cerrar</button>
+          <button>Sincronizar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    
+    <script src="./app/app.js"></script>
+</body>
+</html>
