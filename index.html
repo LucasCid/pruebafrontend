@@ -1,74 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba-tecnica-js</title>
+    <title>Prueba-técnica-js</title>
     <link rel="stylesheet" href="./styles/estilos.css">
 </head>
 <body>
 
-    <button onclick="openModal()">Abrir modal</button>
+    <button onclick="abrirModal()">Abrir modal</button>
 
   <div class="modal" id="modal">
 
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
+    <div class="contenido-modal">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
       <h2>SINCRONIZA TU SII Y AGILIZA TUS OPERACIONES</h2>
-      <div class="tabs">
-        <button class="tab active" onclick="switchTab('empresa')">SII Empresa</button>
-        <button class="tab" onclick="switchTab('personal')">SII Personal</button>
+      <div class="pestañas">
+        <button class="pestaña activa" onclick="cambiarPestaña('empresa')">SII Empresa</button>
+        <button class="pestaña" onclick="cambiarPestaña('personal')">SII Personal</button>
       </div>
 
-      <div id="empresa" class="form-section active">
-        <p>Vincula tu cuenta del SII Empresa para sincronizar automáticamente tus facturas, recibir ofertas en cuanto las emitas y evita requisitos adicionales en tus operaciones.</p>
-        <div class="form-group">
-          <label>Rut Empresa</label>
-          <input type="text" />
-        </div>
-
-        <div class="form-group">
-          <label>Contraseña SII</label>
-          <input type="password" />
-        </div>
-
+     
+      <div id="empresa" class="seccion-formulario activa">
+        <form id="form-empresa">
+          <p>Vincula tu cuenta del SII Empresa...</p>
+          <div class="grupo-formulario">
+            <label>Rut Empresa</label>
+            <input type="text" 
+            name="rutEmpresa" 
+            required pattern="^[0-9]{7,8}-[0-9kK]{1}$" 
+            title="Ingresa un RUT válido. Ej: 76086428-5 o 76925606-k"/>
+          </div>
+          <div class="grupo-formulario">
+            <label>Contraseña SII</label>
+            <input type="password" name="claveEmpresa" required />
+          </div>
+        </form>
       </div>
 
-
-      <div id="personal" class="form-section">
+      <!-- <div id="personal" class="sección-formulario">
         <p>Vincula tu cuenta SII Personal para sincronizar automáticamente tus facturas y recibir ofertas en cuanto las emitas.</p>
-        <div class="form-group">
+        <div class="grupo-formulario">
           <label>Rut Empresa</label>
-          <input type="text" />
+          <input type="number" required/>
         </div>
 
-        <div class="form-group">
+        <div class="grupo-formulario">
           <label>Contraseña SII</label>
-          <input type="password" />
+          <input type="password" required/>
         </div>
 
-        <div class="form-group">
+        <div class="grupo-formulario">
           <label>Contraseña Personal SII</label>
-          <input type="password" />
+          <input type="password" required/>
         </div>
 
+      </div> -->
+      
+      <div id="personal" class="seccion-formulario">
+        <form id="form-personal">
+          <p>Vincula tu cuenta SII Personal...</p>
+          <div class="grupo-formulario">
+            <label>Rut Empresa</label>
+            <input type="text" 
+            name="rutPersonal" 
+            required pattern="^[0-9]{7,8}-[0-9kK]{1}$"
+            title="Ingresa un RUT válido. Ej: 12345678-9 o 10670440-k"
+            />
+          </div>
+          <div class="grupo-formulario">
+            <label>Contraseña SII</label>
+            <input type="password" name="clavePersonal" required />
+          </div>
+          <div class="grupo-formulario">
+            <label>Contraseña Personal SII</label>
+            <input type="password" name="claveAdicional" required />
+          </div>
+        </form>
       </div>
+      
 
-      <div class="info">
+      <div class="informacion">
         <span>🔐</span>
         <span>Tus credenciales estarán encriptadas y solo podremos leer información, sin realizar ningún cambio. Además en cualquier momento podrás desactivarla desde el menú Sincronizaciones</span>
       </div>
 
       <div class="footer">
-        <a href="#">No volver a mostrar</a>
-        <div class="footer-buttons">
-          <button onclick="closeModal()">Cerrar</button>
-          <button>Sincronizar</button>
+        <a href="#" onclick="cerrarModal()">No volver a mostrar</a>
+
+        <div class="botones-footer">
+          <button onclick="cerrarModal()">Cerrar</button>
+          <button onclick="manejarEnvio()">Sincronizar</button>
+
+          <!-- <button onclick="mostrarPopup()">Sincronizar</button> -->
+          <!-- <button onclick="cerrarModal()">Cancelar</button>   -->
         </div>
       </div>
 
     </div>
   </div>
+
+  <div id="popup" class="popup">
+    <div class="contenido-popup">
+      <p>✅ Tus datos ya están sincronizados</p>
+    </div>
+  </div>
+  
     
     <script src="./app/app.js"></script>
 </body>

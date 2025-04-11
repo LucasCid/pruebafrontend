@@ -8,7 +8,7 @@
 }
 
 body {
-    
+  
     background-color: #f4f4f5;
     margin: 0;
     padding: 0;
@@ -16,9 +16,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
+}
 
-  button {
+button {
     /* width: ; */
     padding: 10px 20px;
     background-color: #ffc432;
@@ -27,9 +27,11 @@ body {
     font-weight: bold;
     cursor: pointer;
     color: white;
-  }
+}
 
-  .modal {
+
+
+.modal {
     display: none;
     position: fixed;
     top: 0; left: 0;
@@ -38,102 +40,133 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 10;
-  }
+}
 
-  .modal-content {
+.contenido-modal {
     background: white;
     border-radius: 16px;
     max-width: 500px;
     width: 90%;
     padding: 30px;
     position: relative;
-  }
+}
 
-  .close {
+.cerrar {
     position: absolute;
     right: 20px;
     top: 20px;
     cursor: pointer;
     font-size: 18px;
-  }
+}
 
-  h2 {
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #1d144f;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 999;
+    transform: translateY(-20px);
+}
+
+.popup.mostrar {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+h2 {
     color: #1d144f;
     font-size: 18px;
     margin-bottom: 20px;
-  }
+}
 
-  .tabs {
+.pestañas {
     display: flex;
     margin-bottom: 20px;
     border-bottom: 1px solid #ccc;
-  }
+}
 
-  .tab {
+
+.pestaña {
     padding: 10px 20px;
     cursor: pointer;
     color: #ccc;
+
     border: none;
     background: none;
     font-weight: bold;
-  }
+}
 
-  .tab.active {
+.pestaña.activa {
     color: #1d144f;
     border-bottom: 2px solid #1d144f;
-  }
+}
 
-  .form-section {
+.seccion-formulario {
     display: none;
-  }
+}
 
-  .form-section.active {
+.seccion-formulario.activa {
     display: block;
-  }
+}
 
-  .form-group {
+.grupo-formulario {
     margin-bottom: 15px;
-  }
+}
 
-  input {
+
+
+input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
+}
 
-  .info {
+.informacion {
     font-size: 12px;
     color: #999;
     display: flex;
     align-items: flex-start;
     gap: 10px;
     margin: 20px 0;
-  }
+}
 
-  .footer {
+
+
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #eee;
     padding-top: 20px;
-  }
+}
 
-  .footer a {
+.footer a {
     font-size: 13px;
     font-weight: bold;
     color: #1d144f;
     text-decoration: none;
-  }
+}
 
-  .footer-buttons button:first-child {
+.botones-footer button:first-child {
     background: white;
     color: #ffc432;
     border: 1px solid #ffc432;
     margin-right: 10px;
-  }
+}
 
-  @media (max-width: 500px) {
+@media (max-width: 500px) {
 
     /* .modal {
       width: 90%;
@@ -142,24 +175,24 @@ body {
     } */
 
     .footer {
-      flex-direction: column;
-      align-items: stretch;
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .footer a,
     .footer button {
-      width: 100%;
-      text-align: center;
-      margin: 5px 0;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
     }
 
     .footer {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .footer > *:nth-child(2) { order: 1; }
     .footer > *:nth-child(3) { order: 2; }
     .footer > *:nth-child(1) { order: 3; }
-  }
+}
