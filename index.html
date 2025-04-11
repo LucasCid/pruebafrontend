@@ -30,8 +30,8 @@
             <label>Rut Empresa</label>
             <input type="text" 
             name="rutEmpresa" 
-            required pattern="^[0-9]{7,9}-[0-9kK]{1}$" 
-            title="Ingresa un RUT válido. Ej: 76086428-5 o 76925606-k"/>
+            required pattern="^[0-9]{7,9}-?[0-9kK]{1}$"
+            title="Ingresa un RUT válido. Ej: 76086428-5 con o sin guion"/>
           </div>
           <div class="grupo-formulario">
             <label>Contraseña SII</label>
@@ -66,8 +66,9 @@
             <label>Rut Empresa</label>
             <input type="text" 
             name="rutPersonal" 
-            required pattern="^[0-9]{7,9}-[0-9kK]{1}$"
-            title="Ingresa un RUT válido. Ej: 12345678-9 o 10670440-k"
+            required pattern="^[0-9]{7,9}-?[0-9kK]{1}$"
+
+            title="Ingresa un RUT válido. Ej: 12345678-k con o sin guion"/>
             />
           </div>
           <div class="grupo-formulario">
