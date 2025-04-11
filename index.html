@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba-técnica-js</title>
     <link rel="stylesheet" href="./styles/estilos.css">
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/eba7ec069d.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -59,7 +61,7 @@
       
       <div id="personal" class="seccion-formulario">
         <form id="form-personal">
-          <p class="formulario-subtitle">Vincula tu cuenta SII Personal para sincronizar automáticamente tus facturas y recibir ofertas en cuanto las emitas</p>
+          <p class="formulario-subtitle">Vincula tu cuenta SII Personal para sincronizar automáticamente tus facturas y recibir ofertas en cuanto las emitas.</p>
           <div class="grupo-formulario">
             <label>Rut Empresa</label>
             <input type="text" 
@@ -82,12 +84,14 @@
 
       <div class="informacion">
         <span>🔐</span>
+        <!-- <span><i class="fa-solid fa-lock"></i></span> -->
         <span>Tus credenciales estarán encriptadas y solo podremos leer información, sin realizar ningún cambio. Además en cualquier momento podrás desactivarla desde el menú Sincronizaciones</span>
       </div>
 
       <div class="footer">
+        <div class="contenedor-nomostrar">
         <a href="#" onclick="cerrarModal()" class="footer-nomostrar">No volver a mostrar</a>
-
+      </div>
         <div class="botones-footer">
           <button onclick="cerrarModal()">Cerrar</button>
           <button onclick="manejarEnvio()">Sincronizar</button>

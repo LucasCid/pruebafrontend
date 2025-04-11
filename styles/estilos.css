@@ -129,6 +129,10 @@ h2 {
     padding-bottom: 1rem;
 }
 
+label{
+    font-weight: 500;
+}
+
 
 
 input {
@@ -170,12 +174,10 @@ input {
     border: 1px solid #ffc432;
     margin-right: 10px;
 }
-
 .footer-nomostrar {
+    display: inline-block;
     border-bottom: 1px solid #1d144f;
-    
 }
-
 
 
 @media (max-width: 500px) {
@@ -212,11 +214,7 @@ input {
     
 
     .footer-nomostrar {
-        border-bottom: 1px solid #1d144f;
-        display: inline-block;
-        width: auto; /* 🔑 Esto evita que se estire */
-        text-align: left; /* o center, como prefieras */
-        margin: 0 auto; /* para centrar si es necesario */
+        border-bottom: none;
     }
 
     .footer > *:nth-child(2) { order: 1; }
