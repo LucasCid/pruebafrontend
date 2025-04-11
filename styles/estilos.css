@@ -5,6 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: #1d144f;
 }
 
 body {
@@ -124,6 +125,10 @@ h2 {
     margin-bottom: 15px;
 }
 
+.formulario-subtitle{
+    padding-bottom: 1rem;
+}
+
 
 
 input {
@@ -166,6 +171,13 @@ input {
     margin-right: 10px;
 }
 
+.footer-nomostrar {
+    border-bottom: 1px solid #1d144f;
+    
+}
+
+
+
 @media (max-width: 500px) {
 
     /* .modal {
@@ -190,6 +202,21 @@ input {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    .footer button {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+
+    .footer-nomostrar {
+        border-bottom: 1px solid #1d144f;
+        display: inline-block;
+        width: auto; /* 🔑 Esto evita que se estire */
+        text-align: left; /* o center, como prefieras */
+        margin: 0 auto; /* para centrar si es necesario */
     }
 
     .footer > *:nth-child(2) { order: 1; }
